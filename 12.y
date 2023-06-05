@@ -3,7 +3,6 @@
   #include<stdlib.h>
   void yyerror(char *);
   int yylex();
-  int yywrap();
 %}
 %token NUMBER
 %left '+' '-'
@@ -25,7 +24,7 @@ printf("\n%s",msg);
 printf("Arithematic Expression is invalid\n");
 exit(0);
 }
-int yywrap(){ return 1;}
+
 int main(){
 yyparse();
 return 0;
